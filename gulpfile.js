@@ -5,7 +5,6 @@ const browserSync = require('browser-sync').create();
 const { watch, series, src, dest } = require('gulp');
 
 
-
 function jsHandle (cb) {
     src('./src/*.js')
         .pipe(concat('index.js'))
@@ -14,6 +13,7 @@ function jsHandle (cb) {
 
     cb();
 }
+
 function htmlHandle (cb) {
     src('./src/*.html')
         .pipe(dest('dest', { overwrite:true }))

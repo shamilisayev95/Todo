@@ -43,21 +43,25 @@ h1 {
 
 .addButton {
     height: 50px;
-    width: 50px;
+    width: 75px;
     border-radius: 25px;
     outline: none;
     border: none;
-    background-color: #fff;
+    background-color: lime;
     color: lime;
     margin: 0.25px;
     cursor: pointer;
+    color: white;
+    font-size: 25px;
 }
 
 .addButton:hover {
     opacity: 0.7;
+    cursor: pointer;
 }
 
 .container {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,11 +86,41 @@ h1 {
 }
 
 .removeButton {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin: 0 0.5rem;
     font-family: 'Hind', sans-serif;
     background: none;
     outline: none;
-    color: lime;
+    color: darkred;
     border: none;
+    cursor: pointer;
+
 }
+
+.lineThroughtButton {
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+    font-family: 'Hind', sans-serif;
+    background: none;
+    outline: none;
+    color: darkred;
+    border: none;
+    cursor: pointer;
+
+}
+
+.editButton{
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+    font-family: 'Hind', sans-serif;
+    background: lime;
+    border-radius: 25px;
+    width: 50px;
+    outline: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+

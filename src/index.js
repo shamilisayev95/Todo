@@ -21,27 +21,56 @@ class item {
         removeButton.innerHTML = "Delete";
         removeButton.classList.add("removeButton");
 
+        let lineThroughtButton = document.createElement("button");
+        lineThroughtButton.innerHTML = "Strike Out";
+        lineThroughtButton.classList.add("lineThroughtButton");
+
+        let editButton = document.createElement("button");
+        editButton.innerHTML = "Edit";
+        editButton.classList.add("editButton");
+
+
         container.appendChild(itemBox);
 
         itemBox.appendChild(input);
         itemBox.appendChild(removeButton);
+        itemBox.appendChild(lineThroughtButton);
+        itemBox.appendChild(editButton);
 
         removeButton.addEventListener("click", () => {
             this.remove(itemBox);
         })
 
+        lineThroughtButton.addEventListener("click", () => {
+            this.paintThroughtLine(input);
+        })
+
+        editButton.addEventListener("click", () => {
+            this.edit(input)
+        })
+
     }
-    remove(item){
-        container.removeChild(item);
+
+    remove(item) {
+        container.removeChild(item)
+    }
+
+    paintThroughtLine(input) {
+        input.style.textDecoration = "line-through";
+    }
+
+    edit(input) {
+        input.disabled = !input.disabled;
     }
 }
 
-function check() {
-    if (input.value !== "") {
-        new item(input.value);
-        input.value = "";
+    function check() {
+
+        if (input.value !== "") {
+            new item(input.value);
+            input.value = "";
+        }
     }
-}
 
 addButton.addEventListener("click", check);
 
